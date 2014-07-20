@@ -1,0 +1,1 @@
+This is the tamagotchi project for the second assessment for Epicodus. The goal is to build a tamagotchi webpage game using initialize function and to find a way to set a timer that decreases over a period of time.
