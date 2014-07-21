@@ -1,1 +1,9 @@
-This is the tamagotchi project for the second assessment for Epicodus. The goal is to build a tamagotchi webpage game using initialize function and to find a way to set a timer that decreases over a period of time.
+This is a modified tamagotchi project for the second assessment for Epicodus. 
+Simply download the zipped repository and open the index.html in your web browser.
+
+This project WILL NOT work without the "img" folder! You must download the enitre zip! 
+
+-Lee Kebler
+
+
+License: GPL v2
