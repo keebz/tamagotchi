@@ -1,5 +1,5 @@
 var Tamagotchi = {
-  initialize: function(name, foodLevel, sleepLevel, activityLevel) {
+  initialize: function(name) {
     this.name = name;
     this.foodLevel = 10;
     this.sleepLevel = 10;
@@ -17,19 +17,22 @@ var Tamagotchi = {
   }
 }
 
-
-
-
-
 $(function(){
-
   var newTamagotchi = Object.create(Tamagotchi);
-  newTamagotchi.initialize(name, foodLevel, sleepLevel, activityLevel);
+  newTamagotchi.initialize("Kebler Elf");
 
-  alert(newTamagotchi);
+  
+  var time = window.setInterval(function(){
+    newTamagotchi.timePasses();
+    if (newTamagotchi.foodLevel >= 1){
+    console.log(newTamagotchi.foodLevel);
+  } else if (newTamagotchi.foodLevel === 0) {
+    console.log("dead")
+    }
+  },1000);
 
 
+  $("#petStatus").click(function(){
 
-
-
+  })
 })
