@@ -1,0 +1,55 @@
+img.logo {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+#top {
+	text-align: center;
+}
+#deadPet {
+	display: none;
+	width: 300px;
+	height: auto;
+}
+#alivePet {
+	display: none;
+	width: 300px;
+	height: auto;
+}
+#feedPet {
+	display: none;
+	width: 300px;
+	height: auto;
+}
+#eggPet {
+	width: 300px;
+	height: auto;
+}
+.life {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	font-size: 50px;
+}
+.heart {
+	width: 100px;
+	height: auto;
+}
+#halfHeart {
+	display: none;
+}
+#emptyHeart {
+	display: none;
+}
+div.buttonGroup {
+	width:100%;
+	text-align: center;
+}
+.button{
+	display: inline-block;
+	height: 130px;
+	width: auto; 
+}
+
+
