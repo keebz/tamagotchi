@@ -30,32 +30,33 @@ $(function(){
  
   var time = window.setInterval(function(){
     newTamagotchi.timePasses();
-    console.log(newTamagotchi.isAlive());
-    if (newTamagotchi.isAlive = true) {
+    if (newTamagotchi.isAlive()) {
       $("#foodLevel").text(newTamagotchi.foodLevel);
       $("#playLevel").text(newTamagotchi.activityLevel);
       $("#sleepLevel").text(newTamagotchi.sleepLevel);
 
-        if (newTamagotchi.foodLevel >=5 && newTamagotchi.activityLevel >=5 && newTamagotchi.sleepLevel >=5){
-          $(".pet").hide();
-          $("#alivePet").show();
-        } 
-        if(newTamagotchi.activityLevel >= 1){
+      if (newTamagotchi.foodLevel >=5 && newTamagotchi.activityLevel >=5 && newTamagotchi.sleepLevel >=5){
+        $(".pet").hide();
+        $("#alivePet").show();
+      } else {
+
+        if(newTamagotchi.activityLevel < 5){
               $(".pet").hide();
               $("#playPet").show();
         } 
-        if(newTamagotchi.foodLevel >= 1){
+        if(newTamagotchi.foodLevel < 5){
               $(".pet").hide();
               $("#feedPet").show();
         } 
-        if(newTamagotchi.sleepLevel >= 1){
+        if(newTamagotchi.sleepLevel < 5){
               $(".pet").hide();
               $("#sleepPet").show();
-        } 
+        }
+      }   
     } else {
       $(".pet").hide();
       $("#deadPet").show();
-      $("#foodLevel #playLevel #sleepLevel").text("R.I.P.");
+      $("#foodLevel, #playLevel, #sleepLevel").text("R.I.P.");
         }
     },1000);  
   })
