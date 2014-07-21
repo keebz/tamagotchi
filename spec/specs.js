@@ -30,5 +30,4 @@ describe("Tamagotchi", function() {
       myPet.isAlive().should.equal(false);
     });
   });
-
 });

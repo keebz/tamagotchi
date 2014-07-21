@@ -26,7 +26,6 @@ $(function(){
   $("#fullHeart").show();
   $("#eggPet").show();
   $("#eggPet").click(function(){
-    $(".score").show();
     $(".pet").hide();
     $("#alivePet").show();
  
@@ -37,18 +36,16 @@ $(function(){
       $("#playLevel").text(newTamagotchi.activityLevel);
       $("#sleepLevel").text(newTamagotchi.sleepLevel);
 
-      if (newTamagotchi.foodLevel >=7 && newTamagotchi.activityLevel >=7 && newTamagotchi.sleepLevel >=7){
+      if (newTamagotchi.foodLevel >7 && newTamagotchi.activityLevel >7 && newTamagotchi.sleepLevel >7){
         $(".heart").hide();
         $("#fullHeart").show();
-      } else if (newTamagotchi.foodLevel >=3 && newTamagotchi.activityLevel >=3 && newTamagotchi.sleepLevel >=3){
+      } else if (newTamagotchi.foodLevel >3 && newTamagotchi.activityLevel >3 && newTamagotchi.sleepLevel >3){
         $(".heart").hide();
         $("#halfHeart").show(); 
       } else {
         $(".heart").hide();
         $("#emptyHeart").show();
       }
-
-
 
       if (newTamagotchi.foodLevel >=5 && newTamagotchi.activityLevel >=5 && newTamagotchi.sleepLevel >=5){
         $(".pet").hide();
@@ -81,7 +78,7 @@ $(function(){
 
   var blink = window.setInterval(function(){
     var blinker = 0;
-    $(".button").css("height" , "130px");
+    $(".buttonSize").css("height" , "130px");
   },200);
 
   $("#feedButton").click(function(){
@@ -105,5 +102,8 @@ $(function(){
    }
   });
 
+  $(".logo").click(function(){
+    location.reload();
+  });
 
-})
+});

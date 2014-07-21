@@ -10,8 +10,7 @@
   <body>
     <div class="container">
         <img class="logo" src="img/logo.jpg">
-        <h1 id="top"> This is your very own Tamagotchi... better keep it alive!</h1>
-        <h2 id="top"> Click the egg to crack it open and set your Tamagotchi FREE!</h2>
+        <h1 id="top"> Click the egg to crack it open and release your Tamagotchi!</h1>
       
       <div class="petStatus">
         <img class="pet" class="logo" id="alivePet" src="img/petAlive.gif">
@@ -22,7 +21,6 @@
         <img class="pet" class="logo" id="sleepPet" src="img/sleep.gif">
       </div>
 
-
         <p><span class="life">
           <img class="heart" id="fullHeart" src="img/fullHeart.jpg">
           <img class="heart" id="halfHeart" src="img/halfHeart.jpg">
@@ -31,16 +29,20 @@
         </p>
 
         <div class="buttonGroup">
-              <img class="button" id="feedButton"src="img/feed.jpg">
-        <p class="score">Food :<span id="foodLevel"></span></p>
-              <img class="button" id="playButton"src="img/play.jpg">
-        <p class="score">Play :<span id="playLevel"></span> </p>
-              <img class="button" id="sleepButton"src="img/sleep.jpg">
-        <p class="score">Sleep :<span id="sleepLevel"></span></p>
+            <div class="button" >
+              <img class="buttonSize" id="feedButton"src="img/feed.jpg">
+                <p class="score">Food :<span id="foodLevel"></span></p>
+            </div>
+            <div class="button" > 
+              <img class="buttonSize" id="playButton"src="img/play.jpg">
+                <p class="score">Play :<span id="playLevel"></span> </p>
+            </div>
+            <div class="button" > 
+              <img class="buttonSize" id="sleepButton"src="img/sleep.jpg">
+                <p class="score">Sleep :<span id="sleepLevel"></span></p>
+            </div>
+            <p><em>Click the matching shape to "give" to your Tamagotchi</em></p>
         </div>
-
- 
-
 
       <div id="gameOver">
         <img id="deadGame" src="img/gameover.jpg">

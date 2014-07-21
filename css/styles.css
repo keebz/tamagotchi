@@ -72,9 +72,12 @@ div.buttonGroup {
 	text-align: center;
 }
 .button{
-	display: inline-block;
+	display: inline-block; 
+}
+
+.buttonSize {
 	height: 130px;
-	width: auto; 
+	width: auto;
 }
 
 #deadGame {
@@ -89,7 +92,6 @@ div.buttonGroup {
 }
 
 .score {
-	/*display: inline;*/
 	text-align: center;
 
 }
