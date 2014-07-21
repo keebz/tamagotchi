@@ -6,6 +6,11 @@ img.logo {
 #top {
 	text-align: center;
 }
+.petStatus{
+	width:100%;
+	text-align: center;
+}
+
 #deadPet {
 	display: none;
 	width: 300px;
@@ -21,7 +26,22 @@ img.logo {
 	width: 300px;
 	height: auto;
 }
+
+#playPet {
+	display: none;
+	width: 300px;
+	height: auto;
+}
+
+#sleepPet {
+	display: none;
+	width: 300px;
+	height: auto;
+}
+
+
 #eggPet {
+	display: none;
 	width: 300px;
 	height: auto;
 }
@@ -51,5 +71,6 @@ div.buttonGroup {
 	height: 130px;
 	width: auto; 
 }
+
 
 

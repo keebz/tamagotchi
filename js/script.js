@@ -7,32 +7,83 @@ var Tamagotchi = {
   },
   timePasses: function() {
       this.foodLevel -= 1;
+      this.sleepLevel -=1;
+      this.activityLevel -=1;
   },
   isAlive: function() {
-    if (this.foodLevel >= 1) {
+    if (this.foodLevel >= 1 && this.sleepLevel >= 1 && this.activityLevel >=1) {
       return true;
     } else {
       return false;
     }
   }
-}
+};
 
 $(function(){
   var newTamagotchi = Object.create(Tamagotchi);
   newTamagotchi.initialize("Kebler Elf");
 
-  
+  $("#eggPet").show();
+  $("#eggPet").click(function(){
+    $(".pet").hide();
+    $("#alivePet").show();
+ 
   var time = window.setInterval(function(){
     newTamagotchi.timePasses();
-    if (newTamagotchi.foodLevel >= 1){
-    console.log(newTamagotchi.foodLevel);
-  } else if (newTamagotchi.foodLevel === 0) {
-    console.log("dead")
-    }
-  },1000);
+    console.log(newTamagotchi.isAlive());
+    if (newTamagotchi.isAlive = true) {
+      $("#foodLevel").text(newTamagotchi.foodLevel);
+      $("#playLevel").text(newTamagotchi.activityLevel);
+      $("#sleepLevel").text(newTamagotchi.sleepLevel);
 
-
-  $("#petStatus").click(function(){
-
+        if (newTamagotchi.foodLevel >=5 && newTamagotchi.activityLevel >=5 && newTamagotchi.sleepLevel >=5){
+          $(".pet").hide();
+          $("#alivePet").show();
+        } 
+        if(newTamagotchi.activityLevel >= 1){
+              $(".pet").hide();
+              $("#playPet").show();
+        } 
+        if(newTamagotchi.foodLevel >= 1){
+              $(".pet").hide();
+              $("#feedPet").show();
+        } 
+        if(newTamagotchi.sleepLevel >= 1){
+              $(".pet").hide();
+              $("#sleepPet").show();
+        } 
+    } else {
+      $(".pet").hide();
+      $("#deadPet").show();
+      $("#foodLevel #playLevel #sleepLevel").text("R.I.P.");
+        }
+    },1000);  
   })
+
+  var blink = window.setInterval(function(){
+    $(".button").css("height" , "130px");
+  },200);
+
+  $("#feedButton").click(function(){
+    $("#feedButton").css("height" , "100px");
+      if(newTamagotchi.foodLevel < 10) {
+      newTamagotchi.foodLevel ++;
+   }
+  });
+
+  $("#playButton").click(function(){
+    $("#playButton").css("height" , "100px");
+      if(newTamagotchi.activityLevel < 10) {
+      newTamagotchi.activityLevel ++;
+   }
+  });
+
+  $("#sleepButton").click(function(){
+    $("#sleepButton").css("height" , "100px");
+      if(newTamagotchi.sleepLevel < 10) {
+      newTamagotchi.sleepLevel ++;
+   }
+  });
+
+
 })
