@@ -56,6 +56,11 @@ img.logo {
 	width: 100px;
 	height: auto;
 }
+
+#fullHeart {
+	display: none;
+}
+
 #halfHeart {
 	display: none;
 }
@@ -70,6 +75,23 @@ div.buttonGroup {
 	display: inline-block;
 	height: 130px;
 	width: auto; 
+}
+
+#deadGame {
+	width: 600px;
+	height: auto;
+}
+
+#gameOver {
+	display: none;
+	width:100%;
+	text-align: center;
+}
+
+.score {
+	/*display: inline;*/
+	text-align: center;
+
 }
 
 

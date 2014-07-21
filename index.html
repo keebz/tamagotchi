@@ -9,7 +9,7 @@
   </head>
   <body>
     <div class="container">
-        <img class="logo" src="http://www.studio42.info/Tamagotchi/images/logo.jpg">
+        <img class="logo" src="img/logo.jpg">
         <h1 id="top"> This is your very own Tamagotchi... better keep it alive!</h1>
         <h2 id="top"> Click the egg to crack it open and set your Tamagotchi FREE!</h2>
       
@@ -22,6 +22,7 @@
         <img class="pet" class="logo" id="sleepPet" src="img/sleep.gif">
       </div>
 
+
         <p><span class="life">
           <img class="heart" id="fullHeart" src="img/fullHeart.jpg">
           <img class="heart" id="halfHeart" src="img/halfHeart.jpg">
@@ -31,13 +32,19 @@
 
         <div class="buttonGroup">
               <img class="button" id="feedButton"src="img/feed.jpg">
+        <p class="score">Food :<span id="foodLevel"></span></p>
               <img class="button" id="playButton"src="img/play.jpg">
+        <p class="score">Play :<span id="playLevel"></span> </p>
               <img class="button" id="sleepButton"src="img/sleep.jpg">
+        <p class="score">Sleep :<span id="sleepLevel"></span></p>
         </div>
 
-        <p>Food Level:<span id="foodLevel"></span></p>
-        <p>Play Level:<span id="playLevel"></span></p>
-        <p>Sleep Level:<span id="sleepLevel"></span></p>
+ 
+
+
+      <div id="gameOver">
+        <img id="deadGame" src="img/gameover.jpg">
+      </div>
 
       </div>
   </body>
