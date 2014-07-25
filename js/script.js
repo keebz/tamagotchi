@@ -1,8 +1,8 @@
 var Tamagotchi = {
   initialize: function(name) {
     this.name = name;
-    this.foodLevel = 10;
-    this.sleepLevel = 10;
+    this.foodLevel = 30;
+    this.sleepLevel = 20;
     this.activityLevel = 10;
   },
   timePasses: function() {
