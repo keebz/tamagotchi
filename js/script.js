@@ -36,10 +36,10 @@ $(function(){
       $("#playLevel").text(newTamagotchi.activityLevel);
       $("#sleepLevel").text(newTamagotchi.sleepLevel);
 
-      if (newTamagotchi.foodLevel >7 && newTamagotchi.activityLevel >7 && newTamagotchi.sleepLevel >7){
+      if (newTamagotchi.foodLevel >20 && newTamagotchi.activityLevel >7 && newTamagotchi.sleepLevel >10){
         $(".heart").hide();
         $("#fullHeart").show();
-      } else if (newTamagotchi.foodLevel >3 && newTamagotchi.activityLevel >3 && newTamagotchi.sleepLevel >3){
+      } else if (newTamagotchi.foodLevel >10 && newTamagotchi.activityLevel >3 && newTamagotchi.sleepLevel >7){
         $(".heart").hide();
         $("#halfHeart").show(); 
       } else {
@@ -47,7 +47,7 @@ $(function(){
         $("#emptyHeart").show();
       }
 
-      if (newTamagotchi.foodLevel >=5 && newTamagotchi.activityLevel >=5 && newTamagotchi.sleepLevel >=5){
+      if (newTamagotchi.foodLevel >=20 && newTamagotchi.activityLevel >=5 && newTamagotchi.sleepLevel >=10){
         $(".pet").hide();
         $("#alivePet").show();
       } else {
@@ -56,11 +56,11 @@ $(function(){
               $(".pet").hide();
               $("#playPet").show();
         } 
-        if(newTamagotchi.foodLevel < 5){
+        if(newTamagotchi.foodLevel < 20){
               $(".pet").hide();
               $("#feedPet").show();
         } 
-        if(newTamagotchi.sleepLevel < 5){
+        if(newTamagotchi.sleepLevel < 10){
               $(".pet").hide();
               $("#sleepPet").show();
         }
@@ -83,7 +83,7 @@ $(function(){
 
   $("#feedButton").click(function(){
     $("#feedButton").css("height" , "100px");
-      if(newTamagotchi.foodLevel < 10) {
+      if(newTamagotchi.foodLevel < 30) {
       newTamagotchi.foodLevel ++;
    }
   });
@@ -97,7 +97,7 @@ $(function(){
 
   $("#sleepButton").click(function(){
     $("#sleepButton").css("height" , "100px");
-      if(newTamagotchi.sleepLevel < 10) {
+      if(newTamagotchi.sleepLevel < 20) {
       newTamagotchi.sleepLevel ++;
    }
   });
